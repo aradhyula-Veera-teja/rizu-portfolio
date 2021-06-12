@@ -1,0 +1,471 @@
+/* ---------- import ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,300&display=swap');
+/* ---------- import complete ------- */
+/* ---------- variables ------------- */
+:root{
+  --primary:rgb(201, 16, 16);
+  --bg:#e9e9e9;
+  --hover:#ccc;
+  --shadow: 6px 6px 9px rgba(0,0,0,0.4),-6px -6px 9px #fff;
+  --in_shadow: inset 6px 6px 9px rgba(0,0,0,0.4), inset -6px -6px 9px #fff;
+  --end_shadow:inset -6px -6px 9px #fff;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  }
+body{
+  background: var(--bg);
+  height: 100vh;
+  width: 100%;
+}
+/* --------- headder design ---------- */
+header{
+  position: fixed;
+  top:30px;
+  width: 100%;
+  height: 60px;
+  z-index: 999;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+/* logo design */
+.logo{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  height: 100%;
+  width: 60px;
+  right: 20px;
+  border-radius: 50%;
+}
+.logo a {
+  text-decoration: none;
+  outline: none;
+  color: var(--primary);
+  font-family: 'fira mono','Pattaya','Odibee','Odibee sans','popins';
+  font-size: 28px;
+}
+/* --- logo & header design complete --- */
+
+/* ------ intro design start ------- */
+.intro{
+  margin-top:120px;
+  width: 100%;
+  height: 380px ;
+  background: var(--bg);
+  box-shadow: var(--end_shadow);
+}
+/* intro image design start */
+.image_container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.image_box{
+ position: relative;
+ width: 200px;
+ height: 200px;
+ border-radius: 50%;
+ border: 2px solid #fff;
+}
+.image_box::before{
+  content: '';
+  position: absolute;
+  background: var(--bg);
+  height: calc(100% + 8px);
+  width: calc(100% + 8px);
+  top:-4px;
+  left:-4px;
+  box-shadow: var(--shadow);
+  border-radius: 50%;
+}
+.image_box img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius:50%;
+}
+/* intro image design complete */
+.intro .text{
+  position: relative;
+  width: 100%;
+  top:40px;
+  padding-left: 40px;
+}
+.intro .text h2{
+  font-size: 1.7em;
+  font-weight: regular;
+}
+#com{
+  color: rgba(0,0,0,1);
+  font-size:1.2em;
+}
+.rizu_name{
+  position: relative;
+  background: var(--bg);
+  top:-40px;
+  left:60px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.3em;
+}
+.specs{
+  position: relative;
+  top:-40px;
+  width: 300px;
+  color: slategray;
+  font-style: none;
+}
+/* ----- intro complete ----- */
+/* ------- education ---------*/
+.education{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top:10px;
+  width: 100%;
+  height: calc(+ 20px);
+  border-radius: 20px;
+}
+.education h3{
+  position: relative;
+  text-align: center;
+  color: green;
+  font-size: 1.3em;
+  top:10px;
+}
+.edu_sub{
+  position: relative;
+  background: var(--bg);
+  width: calc(100% - 30px);
+  margin: 15px;
+  border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: var(--shadow);
+}
+.edu_image_box{
+  position: regular;
+  width: calc(100% - 20px);
+  height: 200px;
+  margin: 10px;
+  transition: 0.5s;
+}
+/* ------- hovering effect ----*/
+.edu_image_box:hover{
+  transform: scale(1.1);
+}
+.edu_text_box{
+  position: regular;
+  width: calc(100% - 20px);
+  height: auto;
+  background: var(--bg);
+  margin: 10px;
+  transition: 0.5s;
+}
+.inner_text{
+  position: relative;
+  background: var(--bg);
+  padding: 10px;
+}
+.inner_text h3{
+  position: absolute;
+  color: orange;
+  left: 10px;
+  font-weight:900;
+}
+.inner_text p{
+  position: relative;
+  padding-left: 70px;
+  padding-top: 10px;
+  initial-letter-align: 1px;
+  font-weight: 700;
+  
+}
+.edu_image_box img{
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid slategrey;
+  width: 100%;
+  height: 100%;
+}
+/* -------- education complete ------ */
+/* --------- skils start -------------*/
+.skils{
+  position: relative;
+  display: block;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  margin-top: 60px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  padding: 15px;
+}
+.skils h2{
+  color:#C84D06;
+  text-align: center;
+  font-size: 1.4em;
+ }
+.skils_sub{
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px 20px  15px;
+  width: 100%;
+  height: 60px;
+  background: var(--bg);
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.skils :nth-child(2)
+{
+  margin-top: 50px;
+}
+.skils_sub:hover{
+  box-shadow: var(--shadow);
+  transform: scaleX(1.1);
+}
+.skils_measure{
+  position: relative;
+  height: 10px;
+  width:100%;
+  background: var(--bg);
+  transition: 0.5s;
+  border-radius: 5px;
+  box-shadow: inset 3px 3px 6px #455660,inset -3px -3px 6px #455660,var(--shadow);
+}
+.skils_measure:after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 90%;
+  background: #7216A7;
+  border-radius: 5px;
+}
+.skils h5{
+  position: relative;
+  left:30px;
+  top:-2px;
+  color:#D3108D;
+  font-family: 'fira momo';
+  font-weight: 600;
+}
+/* ------- skills end -------- */
+/* --------- work start ------ */
+.work{
+  background: var(--bg);
+  width: 100%;
+  margin-top:50px;
+  padding: 30px 20px;
+  box-shadow: -6px -6px 9px #fff,var(--end_shadow);
+}
+.art_work{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 3px;
+  padding: 7px;
+  border-radius:5px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+.work_box{
+  position: relative;
+  background: var(--bg);
+  width:150px;
+  height: 100px;
+  transition: 0.5s;
+}
+.work_image{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+  border:2px solid #fff;
+}
+.work_image img{
+  width: 100%;
+  height: 100%;
+}
+.work_content{
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background: var(--bg);
+  padding: 10px 5px;
+  box-shadow: inset 6px 6px 9px rgba(0,0,0,0.5), inset -6px -6px 3px #fff;
+  z-index: -1;
+}
+/* -------- hovering effect ------- */
+.work_box:hover{
+  transform: scale(1.2);
+  z-index: 2;
+}
+.work_image:hover{
+  transform: translateY(-100px);
+  
+}
+/**designer block**/
+.designer_work{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 3px;
+  padding: 7px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  margin-top: 10px;
+  border-radius:5px;
+}
+.work h2{
+  text-align: center;
+  top:0;
+  color:#08B933;
+  font-size: 20px;
+  font-family: 'fira mono','Odibee sans';
+}
+.work h3{
+  position: relative;
+  font-family: 'fira mono','Odibee sans';
+  margin-left: 20px;
+  margin-bottom: 4px;
+  color: #1531C4;
+}
+#d{
+  position: relative;
+  padding-top: 30px;
+}
+/* -------- work complete ---------*/
+/* -------- msg ----------*/
+
+.contact{
+  position: relative;
+  width: 100%;
+  background: var(--bg);
+  padding: 30px 20px;
+}
+.contact h2{
+  top:0;
+  color:#DF0606;
+  font-weight: 900;
+  font-size:20px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-family:  'fira mono','Odibee sans','arial';
+}
+input{
+  position: relative;
+  width:100%;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  background: var(--bg);
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 800;
+  font-family:  'fira mono','Odibee sans','arial';
+  transition: 0.5s;
+  color: #0992BA;
+  border: 1px solid #CEC7C7;
+}
+input:hover{
+  border:none;
+  box-shadow: var(--in_shadow);
+}
+#sub{
+  height: 150px;
+}
+.me{
+  position: relative;
+  top:20px;
+  left: 50%;
+  height:40px;
+  width: 80px;
+  border:none;
+  outline: none;
+  color: #DF0606;
+  border-radius: 10px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  font-size: 16px;
+  text-align: center;
+  font-family: 'fira mono','Odibee sans','arial';
+  font-weight: 700;
+}
+.me:active{
+  box-shadow: var(--in_shadow);
+}
+.social
+{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.social ul{
+  list-style: none;
+  display: flex;
+}
+.social a{
+  background : var(--bg);
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  display: flex;
+  border: 1px solid  #CEC7C7;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  outline: none;
+  text-decoration: none;
+}
+.social a:hover{
+  box-shadow: var(--shadow);
+  border: none;
+}
+.social i{
+  color: #A2A3AC;
+  transition: 0.5s;
+}
+.social .fa-facebook{
+  color: rgb(66 103 178);
+}
+.social .fa-instagram {
+  color: rgb(138, 58, 185);
+}
+.social .fa-twitter{
+  color: #00acee;
+}
+.social .fa-linkedin {
+  color: rgb(0, 119, 181);
+}
+.social .fa-youtube{
+  color: rgb(255,0,0);
+}
